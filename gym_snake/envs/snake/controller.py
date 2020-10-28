@@ -85,7 +85,7 @@ class Controller():
             reward = 1
             self.grid.new_food()
         else:
-            reward = 0
+            reward = -0.1
             empty_coord = snake.body.popleft()
             self.grid.connect(empty_coord, snake.body[0], self.grid.SPACE_COLOR)
             self.grid.draw(snake.head, snake.head_color)
