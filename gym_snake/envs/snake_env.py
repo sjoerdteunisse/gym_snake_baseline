@@ -72,6 +72,8 @@ class SnakeEnv(gym.Env):
         return coord_obs  # Erco
 
     def render(self, mode='human', close=False, frame_speed=.1):
+        return self.last_obs
+    
         if self.viewer is None:
             self.fig = plt.figure()
             self.viewer = self.fig.add_subplot(111)
